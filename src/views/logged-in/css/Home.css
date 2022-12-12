@@ -1,0 +1,21 @@
+.color-primary{
+  color:#13cfbd
+}
+
+.user-nav{
+  display: block;
+  justify-content: end;
+}
+
+.dropdown-menu{
+  left: -60px !important;
+}
+
+.fixed-bar {
+  bottom: 0;
+          height: 75px !important;
+          padding: 13px 0 4px;
+          position: fixed;
+          width: 100%;
+          z-index: 5000;
+  }
