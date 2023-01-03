@@ -1,33 +1,36 @@
 import React , {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
-import {CardActions, Card, CardContent , Typography , Container , Stack , Button , Divider , Grid , List , ListItem , ListItemText , Modal , ListItemAvatar , Avatar } from '@mui/material';
+import {Box, Card, CardContent , Typography , Container , Stack , Button , Divider , Grid , List , ListItem , ListItemText , Modal , ListItemAvatar , Avatar } from '@mui/material';
 import ImageIcon from '@mui/icons-material/Image';
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import './css/Register.css'
+import  { GetIcon } from '../../../utils/GetIcon';
+import '../../../App.css'
+
 
 const Register = () => {
   const navigate = useNavigate();
   const [balance, setBalance] = useState(0);
 
+
   return (
     <>
       <Container maxWidth="sm" >
 
-      <Card  sx={{ minWidth: 200 , marginTop:2 , borderRadius:5}} elevation={1}>
+      <Card  className='cardStyle' elevation={0}>
           <CardContent >
             <Grid container justifyContent="center">
-              <Grid >
-                <Typography variant="h5" sx={{fontWeight :''}} component="div" align='center'>
-                <AccountBalanceWalletIcon/>
-                $ 1.000.000
-                </Typography>
+              <Grid sx={{display:'flex' , alignItems:'center' , marginTop:'5px' }}>
+                  {GetIcon('AccountBalanceWalletIcon' ,{marginRigh:'2px'})}
+                  <Typography variant="h5" component="div" ml={1}>
+                  $ 1.000.000
+                  </Typography>
               </Grid>
             </Grid>
           </CardContent>
         </Card>
 
 
-        <Card sx={{ minWidth: 200 , marginTop:2 , borderRadius:5}} elevation={2}>
+        <Card className='cardStyle' elevation={0}>
           <CardContent>
             <Typography variant="h6" sx={{fontWeight :'600'}} component="div" align='left'>
               Estructura de gastos
@@ -77,7 +80,7 @@ const Register = () => {
 
         <Divider variant="middle" />
 
-        <Card sx={{ minWidth: 200 , marginTop:2 , borderRadius:5}} elevation={2}>
+        <Card className='cardStyle' elevation={0}>
           <CardContent>
             <Typography variant="h6" component="div" align='left' sx={{fontWeight:'600'}}>
               Resumen ultimos registros
@@ -112,14 +115,14 @@ const Register = () => {
               </ListItem>
             </List>
 
-            <Stack spacing={2} direction="row-reverse" centered="true" mt={1}  >
-              <Button variant="contained"  onClick={() => navigate('../home/history')}>Ver mas </Button>
+            <Stack spacing={2} direction="row-reverse" sx={{justifyContent:'center'}} mt={1}  >
+              <Button variant="text"  onClick={() => navigate('../home/history')}> {GetIcon('ArrowDownwardIcon')}  Ver mas </Button>
             </Stack>
 
           </CardContent>
         </Card>
 
-        <Card sx={{ minWidth: 200 , marginTop:2 , borderRadius:5}} elevation={2}>
+        <Card className='cardStyle' elevation={0}>
           <CardContent>
             <Typography variant="h6" component="div" align='left' sx={{fontWeight:'600'}}>
               Proximos pagos programados
@@ -147,10 +150,8 @@ const Register = () => {
         </Card>
 
         <Stack spacing={2} direction="row-reverse" centered="true" mt={2}  mb={10}  >
-          <Button variant="contained" fullWidth onClick={() => navigate('./new')}>Registrar movimiento</Button>
+          <Button variant="contained" color="primary" fullWidth onClick={() => navigate('./new')}>Registrar movimiento</Button>
         </Stack>
-
-      
 
       </Container>
     </>

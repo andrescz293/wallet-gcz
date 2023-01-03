@@ -28,22 +28,27 @@ export default function LabelBottomNavigation() {
 
   return (
   <>
-    <BottomNavigation className='fixed-bar' sx={{}} value={value} onChange={handleChange}>
+    <BottomNavigation className='fixed-bar' color='secondary' sx={{}} value={value} onChange={handleChange}>
       <BottomNavigationAction
         label="Registrar"
         value="register"
         icon={<DriveFileRenameOutlineIcon />}
+        color="primary"
+        // sx={{color:'#fff'}}
       />
       <BottomNavigationAction
         label="Historial"
         value="history"
         icon={<HistoryIcon />}
-        element={ <History/> }
+        color="secondary"
+        // sx={{color:'#fff'}}
       />
       <BottomNavigationAction
         label="Configuración"
         value="config"
         icon={<SettingsIcon />}
+        color="secondary"
+        // sx={{color:'#fff'}}
       />
     </BottomNavigation>
 

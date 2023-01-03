@@ -1,12 +1,10 @@
 import React , { useState } from 'react'
 import {Box, TextField , Typography , Container , Card , Button , Divider , Grid , List , ListItem , ListItemText , ListItemAvatar , Avatar } from '@mui/material';
-import {AddCircleIcon , ArrowDownward} from '@mui/icons-material/';
 import { MobileDatePicker , LocalizationProvider } from '@mui/x-date-pickers/';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs from 'dayjs';
 import { Icon } from '@mui/material';
 import './css/History.css'
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { GetIcon } from '../../../utils/GetIcon';
 
 
@@ -29,40 +27,41 @@ const History = () => {
 
   return (
     <>
-      <Container maxWidth="sm" >
-        
-        <Grid mt={3}>
-          <Typography variant="h6" component="div" align='left' sx={{fontWeight:'600'}}>
+      <Box sx={{backgroundColor:'#fff' , padding:'5px 20px'}}>
+        <Grid pt={2} >
+          <Typography mr={3} variant="h6" component="div" align='left' sx={{fontWeight:'600'}}>
             Resumen registros
           </Typography>
         </Grid>
 
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <Box sx={{ flexGrow: 1 }} mt={4}>
-          <Grid container columnSpacing={1} justifyContent={'center'}>
-            <Grid item xs={4}>
-              <MobileDatePicker
-                label="Fecha inicial"
-                inputFormat="MM/DD/YYYY"
-                value={dateInit}
-                onChange={(e) => handleChange({target:'dateInit' , value: e})}
-                renderInput={(params) => <TextField {...params} />}
-              />
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <Box sx={{ flexGrow: 1 }} mt={4}>
+            <Grid container columnSpacing={1} justifyContent={'center'}>
+              <Grid item xs={4}>
+                <MobileDatePicker
+                  label="Fecha inicial"
+                  inputFormat="MM/DD/YYYY"
+                  value={dateInit}
+                  onChange={(e) => handleChange({target:'dateInit' , value: e})}
+                  renderInput={(params) => <TextField {...params} />}
+                />
+              </Grid>
+              <Grid item xs={4}>
+                <MobileDatePicker
+                  label="Fecha Final"
+                  inputFormat="MM/DD/YYYY"
+                  value={dateEnd}
+                  onChange={(e) => handleChange({target:'dateEnd' , value: e})}
+                  renderInput={(params) => <TextField {...params} />}
+                />
+              </Grid>
             </Grid>
-            <Grid item xs={4}>
-              <MobileDatePicker
-                label="Fecha Final"
-                inputFormat="MM/DD/YYYY"
-                value={dateEnd}
-                onChange={(e) => handleChange({target:'dateEnd' , value: e})}
-                renderInput={(params) => <TextField {...params} />}
-              />
-            </Grid>
-          </Grid>
+          </Box>
+          <hr></hr>
+          </LocalizationProvider>
         </Box>
-        <hr></hr>
-        </LocalizationProvider>
-
+      <Container maxWidth="sm" >
+        
         <Card sx={{ minWidth: 200 , marginTop:2 , borderRadius:5}} elevation={2}>
           <List>
             <ListItem button>

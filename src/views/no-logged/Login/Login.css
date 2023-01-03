@@ -1,0 +1,61 @@
+.body-login{
+  background: #00b09b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #96c93d, #00b09b);
+  background: linear-gradient(to bottom, #96c93d, #00b09b);
+  display: flex !important;
+  height: 100vh;
+  justify-items: center;
+  align-items: center;
+}
+
+.flex-child {
+  padding: 0px 46px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 132px;
+  color: #FFFFFF;
+  flex: 1;
+}
+
+.css-selector {
+  background: linear-gradient(221deg, #198754, #64c920, #20c996);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 17s ease infinite;
+  -moz-animation: AnimationName 17s ease infinite;
+  animation: AnimationName 17s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.gradient-background {
+  background: linear-gradient(300deg,deepskyblue,darkviolet,#020c84);
+  background-size: 180% 180%;
+  animation: gradient-animation 14s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

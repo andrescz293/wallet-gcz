@@ -8,6 +8,7 @@ import RecoveryPassword from "../views/no-logged/RecoveryPassword/RecoveryPasswo
 
 const routes = {
   loggedIn: [
+    {path:'/' , component: <Register/> , headers:true},
     {path:'/home/register' , component: <Register/> , headers:true},
     {path:'/home/register/new' , component: <NewRegister/> , headers:true},
     {path:'/home/history' , component: <History/> , headers:true},

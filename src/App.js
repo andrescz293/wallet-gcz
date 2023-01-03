@@ -16,14 +16,29 @@ import TabsNavigation from './views/logged-in/components/TabsNavigation';
 import LabelBottomNavigation from './views/logged-in/components/LabelBottomNavigation';
 import './views/logged-in/css/Home.css'
 import routes  from './routes/routes';
-const darkTheme = createTheme({
+let darkTheme = createTheme({
   palette: {
-    mode: 'light',
-    primary: teal,
+    primary: {
+      main: '#000A94',
+    },
+    secondary: {
+      main: '#f1f1f19e',
+    },
+    white:{
+      main:'#fff'
+    }
   },
   typography: {
     fontFamily: 'San Francisco'
-  }
+  },
+});
+
+darkTheme = createTheme(darkTheme, {
+  palette: {
+    info: {
+      main: darkTheme.palette.secondary.main,
+    },
+  },
 });
 
 
