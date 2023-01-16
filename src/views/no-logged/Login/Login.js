@@ -5,7 +5,7 @@ import "./Login.css";
 const Login = () => {
   return (
     <>
-      <Container className="body-login gradient-background" >
+      <Container className="body-login gradient-background" maxWidth="sm" >
         <Grid className='flex-child'  >
           <Box>
             <Typography variant="h5" sx={{fontWeight:'600'}} component="div" align='center' mb={5}>  

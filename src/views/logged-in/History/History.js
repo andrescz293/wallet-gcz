@@ -27,6 +27,8 @@ const History = () => {
 
   return (
     <>
+      <Container maxWidth="sm" >
+    
       <Box sx={{backgroundColor:'#fff' , padding:'5px 20px'}}>
         <Grid pt={2} >
           <Typography mr={3} variant="h6" component="div" align='left' sx={{fontWeight:'600'}}>
@@ -60,6 +62,7 @@ const History = () => {
           <hr></hr>
           </LocalizationProvider>
         </Box>
+      </Container>
       <Container maxWidth="sm" >
         
         <Card sx={{ minWidth: 200 , marginTop:2 , borderRadius:5}} elevation={2}>

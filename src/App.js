@@ -19,7 +19,7 @@ import routes  from './routes/routes';
 let darkTheme = createTheme({
   palette: {
     primary: {
-      main: '#000A94',
+      main: '#005bf3',
     },
     secondary: {
       main: '#f1f1f19e',

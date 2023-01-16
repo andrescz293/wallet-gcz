@@ -1,14 +1,11 @@
 import React, { useState , useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
 import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutline';
 import HistoryIcon from '@mui/icons-material/History';
 import SettingsIcon from '@mui/icons-material/Settings';
-import TabPanel from '@mui/lab/TabPanel';
 import TabContext from '@mui/lab/TabContext';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+import { Container , Tabs , Tab  } from '@mui/material';
 
 const TabsNavigation = () => {
 
@@ -30,6 +27,8 @@ const TabsNavigation = () => {
 
   return (
     <>
+      <Container maxWidth="sm" >
+      
       <TabContext value={value}>
         <Tabs variant="fullWidth" value={value} onChange={handleChange} aria-label="icon tabs example">
           <Tab value="register" icon={<DriveFileRenameOutlineIcon />} aria-label="Registrar movimiento" />
@@ -37,6 +36,7 @@ const TabsNavigation = () => {
           <Tab value="config" icon={<SettingsIcon />} aria-label="Configuración" />
         </Tabs>
       </TabContext>
+      </Container>
     </>
   )
 }

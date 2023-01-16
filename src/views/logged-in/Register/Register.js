@@ -1,16 +1,15 @@
 import React , {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
-import {Box, Card, CardContent , Typography , Container , Stack , Button , Divider , Grid , List , ListItem , ListItemText , Modal , ListItemAvatar , Avatar } from '@mui/material';
+import {Box, Card, CardContent , Typography , Container , Stack , Button , Divider , Grid , List , ListItem , ListItemText , Modal , ListItemAvatar , Avatar , Fab  } from '@mui/material';
+import  { GetIcon } from '../../../utils/GetIcon';
 import ImageIcon from '@mui/icons-material/Image';
 import './css/Register.css'
-import  { GetIcon } from '../../../utils/GetIcon';
 import '../../../App.css'
 
 
 const Register = () => {
   const navigate = useNavigate();
   const [balance, setBalance] = useState(0);
-
 
   return (
     <>
@@ -147,6 +146,9 @@ const Register = () => {
             </List>
             
           </CardContent>
+          {/* <Fab color="primary" aria-label="add">
+            <AddIcon />
+          </Fab> */}
         </Card>
 
         <Stack spacing={2} direction="row-reverse" centered="true" mt={2}  mb={10}  >
